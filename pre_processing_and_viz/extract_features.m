@@ -1,5 +1,7 @@
 % Define input directories
-inputDirs = {'./training/mci', './training/control', './training/dementia'};};
+inputDirs = {'./training/mci', './training/control', './training/dementia'};
+%inputDirs = {'./test'};
+
 
 % Define the frequency bands of interest (Hz)
 bands = {
@@ -32,15 +34,14 @@ for dirIdx = 1:length(inputDirs)
         % Extract the MEG data into a variable
         meg_data = D(:,:,:);
         
-        % Après avoir extrait meg_data
-        fs = D.fsample; % Fréquence d'échantillonnage
+        fs = D.fsample; % sample freq
         
-        % Définir les paramètres du filtre passe-bande
-        lowCut = 1; % Fréquence de coupure basse en Hz
-        highCut = 50; % Fréquence de coupure haute en Hz
-        order = 4; % Ordre du filtre
+        % Filter settings
+        lowCut = 1;
+        highCut = 50;
+        order = 4;
         
-        % Créer le filtre passe-bande de Butterworth
+        % Create filter
         [b, a] = butter(order, [lowCut highCut]/(fs/2), 'bandpass');
         
         % Appliquer le filtre
@@ -96,5 +97,5 @@ end
 features_table = cell2table(all_features, 'VariableNames', ['FileName', bands(:,1)']);
 
 % Save the features table to a CSV file
-writetable(features_table, 'extracted_features.csv', 'WriteVariableNames', true);
+writetable(features_table, 'test_features.csv', 'WriteVariableNames', true);
 fprintf('All features extracted and saved.\n');
