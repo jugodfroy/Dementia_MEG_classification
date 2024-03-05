@@ -4,7 +4,7 @@
 
 This project aims to diagnose dementia at its early stages using magnetoencephalography (MEG) data. Given the chronic and progressive nature of dementia and the limited effectiveness of pharmacological treatments, early diagnosis is crucial for effective intervention and slowing the disease's progression. MEG, being a non-invasive and quick clinical examination tool, offers a promising avenue for early detection through the analysis of brain activity.
 
-<br>More info about this project on the [challenge page](https://biomag2020.org/awards/data-analysis-competitions/)
+More info about this project on the [challenge page](https://biomag2020.org/awards/data-analysis-competitions/)
 
 ### Objective
 
@@ -12,7 +12,7 @@ The goal is to classify MEG datasets into one of three classes: control (healthy
 
 ## Dataset
 
-- You can download the dataset [here](https://app.box.com/s/x8bbn3267hr5kl70bv8vvemdc8s0x0og). Make sure you place `training and `test` folders in the root directory of the project.
+- You can download the dataset [here](https://app.box.com/s/x8bbn3267hr5kl70bv8vvemdc8s0x0og). Make sure you place `training' and `test` folders in the root directory of the project.
   The dataset includes MEG data from two different sites, recorded with a 160-channel gradiometer system at a sampling rate of 1000Hz for Site A and 2000Hz for Site B. Each data set includes age and gender information, and for training data, the Mini-Mental State Exam (MMSE) score is provided.
 
 ## Feature Extraction
