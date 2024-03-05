@@ -44,7 +44,7 @@ for dirIdx = 1:length(inputDirs)
         % Create filter
         [b, a] = butter(order, [lowCut highCut]/(fs/2), 'bandpass');
         
-        % Appliquer le filtre
+        % Apply the filtre
         for channel = 1:size(meg_data, 3)
             for trial = 1:size(meg_data, 2)
                 meg_data(:, trial, channel) = filtfilt(b, a, squeeze(meg_data(:, trial, channel)));
