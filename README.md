@@ -40,12 +40,12 @@ A Random Forest classifier is employed for the task, with hyperparameter tuning 
 
 ### Consolidate Data
 
-1. Run the `build_df.ipynb` notebook to consolidate the features CSV file with the demographic information from `hokuto_profile.xlsx`
+Run the `build_df.ipynb` notebook to consolidate the features CSV file with the demographic information from `hokuto_profile.xlsx`
 
 ### Model Training
 
-1. Run the random_forest_prediction.ipynb notebook to train the model and make predictions on the test set.
+Run the random_forest_prediction.ipynb notebook to train the model and make predictions on the test set.
 
 ## Dependencies
 
-1. run `pip install -r requirements.txt` to install the required packages.
+run `pip install -r requirements.txt` to install the required packages.
